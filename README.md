@@ -1,3 +1,16 @@
+## Documentation
+I made this branch to document the Anki source code.
+
+Build the docs by running the following commands from the docs/ directory:
+```bash
+make html
+```
+
+When files were added or deleted run the following command to update the TOC:
+```bash
+sphinx-apidoc -f -o source/ ..
+```
+
 Anki
 -------------------------------------
 

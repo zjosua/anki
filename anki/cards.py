@@ -20,6 +20,14 @@ from anki.consts import *
 # - lrn queue: integer timestamp
 
 class Card:
+    """
+    Flashcard representation.
+
+    :param col: Collection, as used by the anki.stroage module.
+    :type col: anki.collection._Collection
+    :param id: Card ID
+    :type id: int
+    """
 
     def __init__(self, col, id=None):
         self.col = col
@@ -120,6 +128,12 @@ lapses=?, left=?, odue=?, odid=?, did=? where id = ?""",
         return self.css() + self._getQA(reload, browser)['q']
 
     def a(self):
+        """
+        Return the card's answer.
+        
+        :return: Card's answer.
+        :rtype: str
+        """
         return self.css() + self._getQA()['a']
 
     def css(self):
